@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(prime) {
+        if (prime < 2) {
+            return false;
+        }
+        for (let index = 2; index < prime; index++) {
+            if (prime % index === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let number = parseInt(prompt("enter the number"));
+    console.log(isPrime(number));
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayNumberOne = [10, 5, 2, 8, -1, 6, 8];
+    let arrayNumberTwo = [2, 4, 0, 5, 1];
+    let arrayNumberThree = [8, 6, 2, 6, 1, 1, 4];
+
+    function findMinScore(array) {
+        let min = array[0];
+        for (let index = 0; index < array.length; index++) {
+            if (array[index] < min) {
+                min = array[index];
+            }
+        }
+        return min;
+    }
+
+    console.log(" min arrayNumberOne = " + findMinScore(arrayNumberOne));
+    console.log(" min arrayNumberTwo = " + findMinScore(arrayNumberTwo));
+    console.log(" min arrayNumberThree = " + findMinScore(arrayNumberThree));
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="300" style="border:1px solid black;"></canvas>
+<script>
+    let Rectangle = function (x, y, height, width, color) {
+        this.x = 10;
+        this.y = 10;
+        this.height = height;
+        this.width = width;
+        this.color = color;
+        this.getX = function () {
+            return this.x;
+        };
+        this.getY = function () {
+            return this.y;
+        };
+        this.getColor = function () {
+            return this.color;
+        };
+        this.perimeter = function () {
+            return (this.height + this.width) * 2;
+        };
+        this.acreage = function () {
+            return (this.height * this.width);
+        };
+        this.render = function () {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.fillRect(10, 10, 200, 100);
+            ctx.fillStyle = "#000000";
+        };
+    };
+    let rectangle_new = new Rectangle(100, 200);
+    rectangle_new.getX();
+    rectangle_new.getY();
+    rectangle_new.getColor();
+    console.log(rectangle_new.perimeter());
+    rectangle_new.perimeter();
+    console.log(rectangle_new.acreage);
+    rectangle_new.acreage();
+    rectangle_new.render();
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [12, 6, 3, 7, 21, 5, 7];
+
+    function tryRemoveFromArray(array) {
+        for (let index = 0; index < array.length; index++) {
+            if (array[index] === index) {
+              console.log(array);
+            }
+        }
+        return array;
+    }
+    array.splice(array,3);
+    console.log(tryRemoveFromArray(array))
+</script>
+</body>
+</html>
